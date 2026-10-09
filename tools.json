@@ -1,0 +1,4126 @@
+[
+ {
+  "name": "arm_base_set_angle",
+  "description": "Set the arm joint 1: base rotation (turn the whole arm) to an absolute angle in degrees. Range -166.0\u00b0 to 166.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -166.0,
+     "maximum": 166.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator1"
+  ]
+ },
+ {
+  "name": "arm_base_move_left",
+  "description": "Using only the arm joint 1: base rotation (turn the whole arm): move the hand to the robot's left. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator1"
+  ]
+ },
+ {
+  "name": "arm_base_move_right",
+  "description": "Using only the arm joint 1: base rotation (turn the whole arm): move the hand to the robot's right. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator1"
+  ]
+ },
+ {
+  "name": "arm_shoulder_set_angle",
+  "description": "Set the arm joint 2: shoulder pitch (lean the arm forward/back) to an absolute angle in degrees. Range -101.0\u00b0 to 101.0\u00b0; at home it is -14.9\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -101.0,
+     "maximum": 101.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator2"
+  ]
+ },
+ {
+  "name": "arm_shoulder_move_down",
+  "description": "Using only the arm joint 2: shoulder pitch (lean the arm forward/back): lower the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator2"
+  ]
+ },
+ {
+  "name": "arm_shoulder_move_up",
+  "description": "Using only the arm joint 2: shoulder pitch (lean the arm forward/back): raise the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator2"
+  ]
+ },
+ {
+  "name": "arm_upper_arm_twist_set_angle",
+  "description": "Set the arm joint 3: upper-arm rotation to an absolute angle in degrees. Range -166.0\u00b0 to 166.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -166.0,
+     "maximum": 166.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator3"
+  ]
+ },
+ {
+  "name": "arm_upper_arm_twist_move_left",
+  "description": "Using only the arm joint 3: upper-arm rotation: move the hand to the robot's left. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator3"
+  ]
+ },
+ {
+  "name": "arm_upper_arm_twist_move_right",
+  "description": "Using only the arm joint 3: upper-arm rotation: move the hand to the robot's right. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator3"
+  ]
+ },
+ {
+  "name": "arm_elbow_set_angle",
+  "description": "Set the arm joint 4: elbow bend to an absolute angle in degrees. Range -176.0\u00b0 to -4.0\u00b0; at home it is -147.2\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -176.0,
+     "maximum": -4.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator4"
+  ]
+ },
+ {
+  "name": "arm_elbow_move_up",
+  "description": "Using only the arm joint 4: elbow bend: raise the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator4"
+  ]
+ },
+ {
+  "name": "arm_elbow_move_down",
+  "description": "Using only the arm joint 4: elbow bend: lower the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator4"
+  ]
+ },
+ {
+  "name": "arm_forearm_twist_set_angle",
+  "description": "Set the arm joint 5: forearm rotation to an absolute angle in degrees. Range -166.0\u00b0 to 166.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -166.0,
+     "maximum": 166.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator5"
+  ]
+ },
+ {
+  "name": "arm_forearm_twist_roll_thumb_side_down",
+  "description": "Using only the arm joint 5: forearm rotation: roll the hand so the thumb side goes down. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator5"
+  ]
+ },
+ {
+  "name": "arm_forearm_twist_roll_thumb_side_up",
+  "description": "Using only the arm joint 5: forearm rotation: roll the hand so the thumb side goes up. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator5"
+  ]
+ },
+ {
+  "name": "arm_wrist_pitch_set_angle",
+  "description": "Set the arm joint 6: arm-side wrist pitch to an absolute angle in degrees. Range -1.0\u00b0 to 215.0\u00b0; at home it is 132.3\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -1.0,
+     "maximum": 215.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator6"
+  ]
+ },
+ {
+  "name": "arm_wrist_pitch_move_up",
+  "description": "Using only the arm joint 6: arm-side wrist pitch: raise the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator6"
+  ]
+ },
+ {
+  "name": "arm_wrist_pitch_move_down",
+  "description": "Using only the arm joint 6: arm-side wrist pitch: lower the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator6"
+  ]
+ },
+ {
+  "name": "arm_flange_twist_set_angle",
+  "description": "Set the arm joint 7: flange rotation (spin the hand about the arm's last axis) to an absolute angle in degrees. Range -166.0\u00b0 to 166.0\u00b0; at home it is 135.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -166.0,
+     "maximum": 166.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator7"
+  ]
+ },
+ {
+  "name": "arm_flange_twist_turn_right",
+  "description": "Using only the arm joint 7: flange rotation (spin the hand about the arm's last axis): turn the hand clockwise (seen from above). Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator7"
+  ]
+ },
+ {
+  "name": "arm_flange_twist_turn_left",
+  "description": "Using only the arm joint 7: flange rotation (spin the hand about the arm's last axis): turn the hand counter-clockwise (seen from above). Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "actuator7"
+  ]
+ },
+ {
+  "name": "wrist_side_set_angle",
+  "description": "Set the wrist side-to-side deviation (radial/ulnar) to an absolute angle in degrees. Range -30.0\u00b0 to 10.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -30.0,
+     "maximum": 10.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_WRJ2"
+  ]
+ },
+ {
+  "name": "wrist_side_toward_thumb_side",
+  "description": "Using only the wrist side-to-side deviation (radial/ulnar): swing it sideways toward the thumb side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_WRJ2"
+  ]
+ },
+ {
+  "name": "wrist_side_toward_little_finger_side",
+  "description": "Using only the wrist side-to-side deviation (radial/ulnar): swing it sideways toward the little-finger side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_WRJ2"
+  ]
+ },
+ {
+  "name": "wrist_bend_set_angle",
+  "description": "Set the wrist flexion/extension (bend the hand toward the palm side or the back) to an absolute angle in degrees. Range -40.0\u00b0 to 28.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -40.0,
+     "maximum": 28.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_WRJ1"
+  ]
+ },
+ {
+  "name": "wrist_bend_toward_palm",
+  "description": "Using only the wrist flexion/extension (bend the hand toward the palm side or the back): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_WRJ1"
+  ]
+ },
+ {
+  "name": "wrist_bend_toward_back_of_hand",
+  "description": "Using only the wrist flexion/extension (bend the hand toward the palm side or the back): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_WRJ1"
+  ]
+ },
+ {
+  "name": "thumb_base_rotation_set_angle",
+  "description": "Set the thumb base rotation (swing the thumb around its base) to an absolute angle in degrees. Range -60.0\u00b0 to 60.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -60.0,
+     "maximum": 60.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ5"
+  ]
+ },
+ {
+  "name": "thumb_base_rotation_toward_wrist",
+  "description": "Using only the thumb base rotation (swing the thumb around its base): move it back toward the wrist. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ5"
+  ]
+ },
+ {
+  "name": "thumb_base_rotation_toward_fingertips",
+  "description": "Using only the thumb base rotation (swing the thumb around its base): move it toward the fingertips. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ5"
+  ]
+ },
+ {
+  "name": "thumb_base_lift_set_angle",
+  "description": "Set the thumb base abduction (lift the thumb away from the side of the palm) to an absolute angle in degrees. Range 0.0\u00b0 to 70.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": 0.0,
+     "maximum": 70.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ4"
+  ]
+ },
+ {
+  "name": "thumb_base_lift_toward_palm",
+  "description": "Using only the thumb base abduction (lift the thumb away from the side of the palm): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ4"
+  ]
+ },
+ {
+  "name": "thumb_base_lift_toward_back_of_hand",
+  "description": "Using only the thumb base abduction (lift the thumb away from the side of the palm): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ4"
+  ]
+ },
+ {
+  "name": "thumb_hub_twist_set_angle",
+  "description": "Set the thumb hub joint (small twist) to an absolute angle in degrees. Range -12.0\u00b0 to 12.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -12.0,
+     "maximum": 12.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ3"
+  ]
+ },
+ {
+  "name": "thumb_hub_twist_toward_palm",
+  "description": "Using only the thumb hub joint (small twist): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ3"
+  ]
+ },
+ {
+  "name": "thumb_hub_twist_toward_back_of_hand",
+  "description": "Using only the thumb hub joint (small twist): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ3"
+  ]
+ },
+ {
+  "name": "thumb_middle_joint_set_angle",
+  "description": "Set the thumb middle joint bend to an absolute angle in degrees. Range -40.0\u00b0 to 40.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -40.0,
+     "maximum": 40.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ2"
+  ]
+ },
+ {
+  "name": "thumb_middle_joint_toward_fingertips",
+  "description": "Using only the thumb middle joint bend: move it toward the fingertips. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ2"
+  ]
+ },
+ {
+  "name": "thumb_middle_joint_toward_wrist",
+  "description": "Using only the thumb middle joint bend: move it back toward the wrist. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ2"
+  ]
+ },
+ {
+  "name": "thumb_tip_joint_set_angle",
+  "description": "Set the thumb tip joint bend to an absolute angle in degrees. Range -15.0\u00b0 to 90.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -15.0,
+     "maximum": 90.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ1"
+  ]
+ },
+ {
+  "name": "thumb_tip_joint_toward_fingertips",
+  "description": "Using only the thumb tip joint bend: move it toward the fingertips. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ1"
+  ]
+ },
+ {
+  "name": "thumb_tip_joint_toward_wrist",
+  "description": "Using only the thumb tip joint bend: move it back toward the wrist. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_THJ1"
+  ]
+ },
+ {
+  "name": "index_spread_set_angle",
+  "description": "Set the index finger side-to-side swing at the knuckle (spread) to an absolute angle in degrees. Range -20.0\u00b0 to 20.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -20.0,
+     "maximum": 20.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ4"
+  ]
+ },
+ {
+  "name": "index_spread_toward_little_finger_side",
+  "description": "Using only the index finger side-to-side swing at the knuckle (spread): swing it sideways toward the little-finger side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ4"
+  ]
+ },
+ {
+  "name": "index_spread_toward_thumb_side",
+  "description": "Using only the index finger side-to-side swing at the knuckle (spread): swing it sideways toward the thumb side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ4"
+  ]
+ },
+ {
+  "name": "index_knuckle_set_angle",
+  "description": "Set the index finger knuckle (base joint) bend to an absolute angle in degrees. Range -15.0\u00b0 to 90.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -15.0,
+     "maximum": 90.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ3"
+  ]
+ },
+ {
+  "name": "index_knuckle_toward_palm",
+  "description": "Using only the index finger knuckle (base joint) bend: bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ3"
+  ]
+ },
+ {
+  "name": "index_knuckle_toward_back_of_hand",
+  "description": "Using only the index finger knuckle (base joint) bend: straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ3"
+  ]
+ },
+ {
+  "name": "index_upper_joints_set_angle",
+  "description": "Set the index finger middle + tip joints bending together (coupled) to an absolute angle in degrees (sum of the two joint angles). Range 0.0\u00b0 to 180.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": 0.0,
+     "maximum": 180.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ0"
+  ]
+ },
+ {
+  "name": "index_upper_joints_toward_palm",
+  "description": "Using only the index finger middle + tip joints bending together (coupled): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ0"
+  ]
+ },
+ {
+  "name": "index_upper_joints_toward_back_of_hand",
+  "description": "Using only the index finger middle + tip joints bending together (coupled): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_FFJ0"
+  ]
+ },
+ {
+  "name": "middle_spread_set_angle",
+  "description": "Set the middle finger side-to-side swing at the knuckle (spread) to an absolute angle in degrees. Range -20.0\u00b0 to 20.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -20.0,
+     "maximum": 20.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ4"
+  ]
+ },
+ {
+  "name": "middle_spread_toward_little_finger_side",
+  "description": "Using only the middle finger side-to-side swing at the knuckle (spread): swing it sideways toward the little-finger side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ4"
+  ]
+ },
+ {
+  "name": "middle_spread_toward_thumb_side",
+  "description": "Using only the middle finger side-to-side swing at the knuckle (spread): swing it sideways toward the thumb side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ4"
+  ]
+ },
+ {
+  "name": "middle_knuckle_set_angle",
+  "description": "Set the middle finger knuckle (base joint) bend to an absolute angle in degrees. Range -15.0\u00b0 to 90.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -15.0,
+     "maximum": 90.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ3"
+  ]
+ },
+ {
+  "name": "middle_knuckle_toward_palm",
+  "description": "Using only the middle finger knuckle (base joint) bend: bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ3"
+  ]
+ },
+ {
+  "name": "middle_knuckle_toward_back_of_hand",
+  "description": "Using only the middle finger knuckle (base joint) bend: straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ3"
+  ]
+ },
+ {
+  "name": "middle_upper_joints_set_angle",
+  "description": "Set the middle finger middle + tip joints bending together (coupled) to an absolute angle in degrees (sum of the two joint angles). Range 0.0\u00b0 to 180.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": 0.0,
+     "maximum": 180.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ0"
+  ]
+ },
+ {
+  "name": "middle_upper_joints_toward_palm",
+  "description": "Using only the middle finger middle + tip joints bending together (coupled): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ0"
+  ]
+ },
+ {
+  "name": "middle_upper_joints_toward_back_of_hand",
+  "description": "Using only the middle finger middle + tip joints bending together (coupled): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_MFJ0"
+  ]
+ },
+ {
+  "name": "ring_spread_set_angle",
+  "description": "Set the ring finger side-to-side swing at the knuckle (spread) to an absolute angle in degrees. Range -20.0\u00b0 to 20.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -20.0,
+     "maximum": 20.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ4"
+  ]
+ },
+ {
+  "name": "ring_spread_toward_thumb_side",
+  "description": "Using only the ring finger side-to-side swing at the knuckle (spread): swing it sideways toward the thumb side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ4"
+  ]
+ },
+ {
+  "name": "ring_spread_toward_little_finger_side",
+  "description": "Using only the ring finger side-to-side swing at the knuckle (spread): swing it sideways toward the little-finger side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ4"
+  ]
+ },
+ {
+  "name": "ring_knuckle_set_angle",
+  "description": "Set the ring finger knuckle (base joint) bend to an absolute angle in degrees. Range -15.0\u00b0 to 90.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -15.0,
+     "maximum": 90.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ3"
+  ]
+ },
+ {
+  "name": "ring_knuckle_toward_palm",
+  "description": "Using only the ring finger knuckle (base joint) bend: bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ3"
+  ]
+ },
+ {
+  "name": "ring_knuckle_toward_back_of_hand",
+  "description": "Using only the ring finger knuckle (base joint) bend: straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ3"
+  ]
+ },
+ {
+  "name": "ring_upper_joints_set_angle",
+  "description": "Set the ring finger middle + tip joints bending together (coupled) to an absolute angle in degrees (sum of the two joint angles). Range 0.0\u00b0 to 180.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": 0.0,
+     "maximum": 180.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ0"
+  ]
+ },
+ {
+  "name": "ring_upper_joints_toward_palm",
+  "description": "Using only the ring finger middle + tip joints bending together (coupled): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ0"
+  ]
+ },
+ {
+  "name": "ring_upper_joints_toward_back_of_hand",
+  "description": "Using only the ring finger middle + tip joints bending together (coupled): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_RFJ0"
+  ]
+ },
+ {
+  "name": "little_palm_cup_set_angle",
+  "description": "Set the little finger metacarpal (cup the palm on the little-finger side) to an absolute angle in degrees. Range 0.0\u00b0 to 45.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": 0.0,
+     "maximum": 45.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ5"
+  ]
+ },
+ {
+  "name": "little_palm_cup_toward_palm",
+  "description": "Using only the little finger metacarpal (cup the palm on the little-finger side): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ5"
+  ]
+ },
+ {
+  "name": "little_palm_cup_toward_back_of_hand",
+  "description": "Using only the little finger metacarpal (cup the palm on the little-finger side): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ5"
+  ]
+ },
+ {
+  "name": "little_spread_set_angle",
+  "description": "Set the little finger side-to-side swing at the knuckle (spread) to an absolute angle in degrees. Range -20.0\u00b0 to 20.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -20.0,
+     "maximum": 20.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ4"
+  ]
+ },
+ {
+  "name": "little_spread_toward_thumb_side",
+  "description": "Using only the little finger side-to-side swing at the knuckle (spread): swing it sideways toward the thumb side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ4"
+  ]
+ },
+ {
+  "name": "little_spread_toward_little_finger_side",
+  "description": "Using only the little finger side-to-side swing at the knuckle (spread): swing it sideways toward the little-finger side of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ4"
+  ]
+ },
+ {
+  "name": "little_knuckle_set_angle",
+  "description": "Set the little finger knuckle (base joint) bend to an absolute angle in degrees. Range -15.0\u00b0 to 90.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": -15.0,
+     "maximum": 90.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ3"
+  ]
+ },
+ {
+  "name": "little_knuckle_toward_palm",
+  "description": "Using only the little finger knuckle (base joint) bend: bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ3"
+  ]
+ },
+ {
+  "name": "little_knuckle_toward_back_of_hand",
+  "description": "Using only the little finger knuckle (base joint) bend: straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ3"
+  ]
+ },
+ {
+  "name": "little_upper_joints_set_angle",
+  "description": "Set the little finger middle + tip joints bending together (coupled) to an absolute angle in degrees (sum of the two joint angles). Range 0.0\u00b0 to 180.0\u00b0; at home it is 0.0\u00b0.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "Target angle in degrees.",
+     "minimum": 0.0,
+     "maximum": 180.0
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "degrees"
+   ],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "little_upper_joints_toward_palm",
+  "description": "Using only the little finger middle + tip joints bending together (coupled): bend / flex / curl it in toward the palm. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "little_upper_joints_toward_back_of_hand",
+  "description": "Using only the little finger middle + tip joints bending together (coupled): straighten / extend / open it back toward the back of the hand. Moves it by the given number of degrees from where it is now (stops at its limits).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "degrees": {
+     "type": "number",
+     "description": "How far to move, in degrees.",
+     "default": 15,
+     "minimum": 0,
+     "maximum": 180
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "actuator",
+  "actuators": [
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "curl_thumb",
+  "description": "Curl the whole thumb closed (all its joints, as in a fist). Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ2",
+   "rh_A_THJ1"
+  ]
+ },
+ {
+  "name": "straighten_thumb",
+  "description": "Straighten / open the whole thumb fully. Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ2",
+   "rh_A_THJ1"
+  ]
+ },
+ {
+  "name": "set_thumb_curl",
+  "description": "Set how curled the thumb is: 0 = fully straight, 1 = fully curled, 0.5 = half way.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fraction": {
+     "type": "number",
+     "description": "Curl amount 0..1.",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "fraction"
+   ],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ2",
+   "rh_A_THJ1"
+  ]
+ },
+ {
+  "name": "curl_index",
+  "description": "Curl the whole index finger closed (all its joints, as in a fist). Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_FFJ3",
+   "rh_A_FFJ0"
+  ]
+ },
+ {
+  "name": "straighten_index",
+  "description": "Straighten / open the whole index finger fully. Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_FFJ3",
+   "rh_A_FFJ0"
+  ]
+ },
+ {
+  "name": "set_index_curl",
+  "description": "Set how curled the index finger is: 0 = fully straight, 1 = fully curled, 0.5 = half way.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fraction": {
+     "type": "number",
+     "description": "Curl amount 0..1.",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "fraction"
+   ],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_FFJ3",
+   "rh_A_FFJ0"
+  ]
+ },
+ {
+  "name": "curl_middle",
+  "description": "Curl the whole middle finger closed (all its joints, as in a fist). Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_MFJ3",
+   "rh_A_MFJ0"
+  ]
+ },
+ {
+  "name": "straighten_middle",
+  "description": "Straighten / open the whole middle finger fully. Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_MFJ3",
+   "rh_A_MFJ0"
+  ]
+ },
+ {
+  "name": "set_middle_curl",
+  "description": "Set how curled the middle finger is: 0 = fully straight, 1 = fully curled, 0.5 = half way.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fraction": {
+     "type": "number",
+     "description": "Curl amount 0..1.",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "fraction"
+   ],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_MFJ3",
+   "rh_A_MFJ0"
+  ]
+ },
+ {
+  "name": "curl_ring",
+  "description": "Curl the whole ring finger closed (all its joints, as in a fist). Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_RFJ3",
+   "rh_A_RFJ0"
+  ]
+ },
+ {
+  "name": "straighten_ring",
+  "description": "Straighten / open the whole ring finger fully. Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_RFJ3",
+   "rh_A_RFJ0"
+  ]
+ },
+ {
+  "name": "set_ring_curl",
+  "description": "Set how curled the ring finger is: 0 = fully straight, 1 = fully curled, 0.5 = half way.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fraction": {
+     "type": "number",
+     "description": "Curl amount 0..1.",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "fraction"
+   ],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_RFJ3",
+   "rh_A_RFJ0"
+  ]
+ },
+ {
+  "name": "curl_little",
+  "description": "Curl the whole little finger closed (all its joints, as in a fist). Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "straighten_little",
+  "description": "Straighten / open the whole little finger fully. Other fingers are not moved.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "set_little_curl",
+  "description": "Set how curled the little finger is: 0 = fully straight, 1 = fully curled, 0.5 = half way.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fraction": {
+     "type": "number",
+     "description": "Curl amount 0..1.",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "fraction"
+   ],
+   "additionalProperties": false
+  },
+  "family": "finger",
+  "actuators": [
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "spread_fingers_apart",
+  "description": "Spread the four fingers apart sideways (fan the hand out), using each finger's knuckle side-swing joint.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "spread",
+  "actuators": [
+   "rh_A_FFJ4",
+   "rh_A_RFJ4",
+   "rh_A_LFJ4"
+  ]
+ },
+ {
+  "name": "bring_fingers_together",
+  "description": "Bring the four fingers back together side by side (no gaps).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "spread",
+  "actuators": [
+   "rh_A_FFJ4",
+   "rh_A_RFJ4",
+   "rh_A_LFJ4"
+  ]
+ },
+ {
+  "name": "hand_pose_scissors",
+  "description": "Shape the hand into the 'scissors' pose: index and middle extended, others curled ('scissors' / peace sign). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_rock",
+  "description": "Shape the hand into the 'rock' pose: a fist (rock-paper-scissors 'rock'). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_paper",
+  "description": "Shape the hand into the 'paper' pose: a flat open hand (rock-paper-scissors 'paper'). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_open_hand",
+  "description": "Shape the hand into the 'open hand' pose: every finger and the thumb straight. Use it to let go of / release / drop a held object once it has been lowered onto the table or target zone, or to open the hand before grasping. Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_close_hand",
+  "description": "Shape the hand into the 'close hand' pose: a full fist: all fingers and thumb curled. Use it to grab, grasp and hold an object once the open palm is resting on it, before lifting it; this is how the hand picks things up. Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_point",
+  "description": "Shape the hand into the 'point' pose: index finger extended, the rest curled (pointing). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_two_finger_pinch",
+  "description": "Shape the hand into the 'two finger pinch' pose: thumb and index fingertips pressed together (precision pinch). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_three_finger_pinch",
+  "description": "Shape the hand into the 'three finger pinch' pose: thumb, index and middle fingertips together (tripod pinch). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_parallel_extension",
+  "description": "Shape the hand into the 'parallel extension' pose: fingers straight but bent at the knuckles, thumb opposite (flat clamp). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_grasp_sphere",
+  "description": "Shape the hand into the 'grasp sphere' pose: fingers and thumb wrapped as around a ball; can grab a ball the palm is resting on. Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_pre_grasp",
+  "description": "Shape the hand into the 'pre grasp' pose: hand shaped ready to grasp (partially open). Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_grasp_soft",
+  "description": "Shape the hand into the 'grasp soft' pose: a gentle wrap grasp to hold an object the palm is on. Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "hand_pose_grasp_hard",
+  "description": "Shape the hand into the 'grasp hard' pose: a firm wrap grasp to hold an object the palm is on. Optionally apply it to only some fingers.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "fingers": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "thumb",
+       "index",
+       "middle",
+       "ring",
+       "little"
+      ]
+     },
+     "description": "Only shape these fingers (default: all)."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "pose",
+  "actuators": [
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "move_palm_to_position",
+  "description": "Move the palm centre to an exact [x, y, z] point in metres (world frame; table top is at z=0.4, +x is away from the robot, +y is the robot's left). Optionally choose which way the palm faces.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "x": {
+     "type": "number",
+     "description": "metres"
+    },
+    "y": {
+     "type": "number",
+     "description": "metres"
+    },
+    "z": {
+     "type": "number",
+     "description": "metres"
+    },
+    "palm_facing": {
+     "enum": [
+      "forward",
+      "back",
+      "left",
+      "right",
+      "up",
+      "down"
+     ],
+     "description": "Direction the palm faces (default: keep current)."
+    },
+    "path": {
+     "enum": [
+      "linear",
+      "joint"
+     ],
+     "description": "Straight line (default) or joint-space."
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds (default: based on distance).",
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [
+    "x",
+    "y",
+    "z"
+   ],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_forward",
+  "description": "Move the whole hand forward in a straight line by a distance in centimetres, keeping its orientation (move the hand forward, away from the robot base).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "distance_cm": {
+     "type": "number",
+     "description": "How far to move.",
+     "default": 10,
+     "minimum": 0,
+     "maximum": 60
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_back",
+  "description": "Move the whole hand back in a straight line by a distance in centimetres, keeping its orientation (move the hand back toward the robot base).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "distance_cm": {
+     "type": "number",
+     "description": "How far to move.",
+     "default": 10,
+     "minimum": 0,
+     "maximum": 60
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_left",
+  "description": "Move the whole hand left in a straight line by a distance in centimetres, keeping its orientation (move the hand to the robot's left).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "distance_cm": {
+     "type": "number",
+     "description": "How far to move.",
+     "default": 10,
+     "minimum": 0,
+     "maximum": 60
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_right",
+  "description": "Move the whole hand right in a straight line by a distance in centimetres, keeping its orientation (move the hand to the robot's right).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "distance_cm": {
+     "type": "number",
+     "description": "How far to move.",
+     "default": 10,
+     "minimum": 0,
+     "maximum": 60
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_up",
+  "description": "Move the whole hand up in a straight line by a distance in centimetres, keeping its orientation (raise the hand). Use it to lift a grasped object off the table, or to move the hand away after releasing an object.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "distance_cm": {
+     "type": "number",
+     "description": "How far to move.",
+     "default": 10,
+     "minimum": 0,
+     "maximum": 60
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_down",
+  "description": "Move the whole hand down in a straight line by a distance in centimetres, keeping its orientation (lower the hand). Use it to lower the hand, or a held object, toward the table.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "distance_cm": {
+     "type": "number",
+     "description": "How far to move.",
+     "default": 10,
+     "minimum": 0,
+     "maximum": 60
+    },
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "turn_palm_to_face_forward",
+  "description": "Rotate the hand in place so the palm faces forward (to the forward).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "turn_palm_to_face_back",
+  "description": "Rotate the hand in place so the palm faces back (to the back).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "turn_palm_to_face_left",
+  "description": "Rotate the hand in place so the palm faces left (to the left).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "turn_palm_to_face_right",
+  "description": "Rotate the hand in place so the palm faces right (to the right).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "turn_palm_to_face_up",
+  "description": "Rotate the hand in place so the palm faces up (up toward the sky).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "turn_palm_to_face_down",
+  "description": "Rotate the hand in place so the palm faces down (toward the table).",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds the motion takes.",
+     "default": 1.0,
+     "minimum": 0.2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "palm",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_above_red_cube",
+  "description": "Move the hand, palm facing down, to hover above the red cube (box). Use this to approach the red cube before grasping it.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_cm": {
+     "type": "number",
+     "description": "Height of the palm centre above the object's centre.",
+     "default": 15,
+     "minimum": 3,
+     "maximum": 40
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "lower_palm_onto_red_cube",
+  "description": "Lower the hand straight down so the palm centre is at the red cube (grasping position), keeping the current orientation. Close the hand afterwards to grab it.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_offset_cm": {
+     "type": "number",
+     "description": "Stop this far above the object's centre.",
+     "default": 0,
+     "minimum": -2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_above_blue_ball",
+  "description": "Move the hand, palm facing down, to hover above the blue ball (sphere). Use this to approach the blue ball before grasping it.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_cm": {
+     "type": "number",
+     "description": "Height of the palm centre above the object's centre.",
+     "default": 15,
+     "minimum": 3,
+     "maximum": 40
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "lower_palm_onto_blue_ball",
+  "description": "Lower the hand straight down so the palm centre is at the blue ball (grasping position), keeping the current orientation. Close the hand afterwards to grab it.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_offset_cm": {
+     "type": "number",
+     "description": "Stop this far above the object's centre.",
+     "default": 0,
+     "minimum": -2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_above_green_cylinder",
+  "description": "Move the hand, palm facing down, to hover above the green cylinder (cylinder). Use this to approach the green cylinder before grasping it.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_cm": {
+     "type": "number",
+     "description": "Height of the palm centre above the object's centre.",
+     "default": 15,
+     "minimum": 3,
+     "maximum": 40
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "lower_palm_onto_green_cylinder",
+  "description": "Lower the hand straight down so the palm centre is at the green cylinder (grasping position), keeping the current orientation. Close the hand afterwards to grab it.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_offset_cm": {
+     "type": "number",
+     "description": "Stop this far above the object's centre.",
+     "default": 0,
+     "minimum": -2,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "move_palm_above_target_zone",
+  "description": "Carry the hand (and anything it holds) to hover above the yellow target zone, palm facing down.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_cm": {
+     "type": "number",
+     "description": "Palm height above the table.",
+     "default": 17,
+     "minimum": 5,
+     "maximum": 40
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "lower_palm_to_target_zone",
+  "description": "Lower the hand straight down over the target zone to place a held object on the table there. Open the hand afterwards to release it.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "height_cm": {
+     "type": "number",
+     "description": "Palm height above the table when stopping.",
+     "default": 3.5,
+     "minimum": 1,
+     "maximum": 20
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "object",
+  "actuators": []
+ },
+ {
+  "name": "get_robot_state",
+  "description": "Read the full robot state: palm position and orientation, fingertip positions, finger curl, wrist and arm joint angles, and every object's position, contacts and status.",
+  "input_schema": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": []
+ },
+ {
+  "name": "wait",
+  "description": "Do nothing for a moment and let the scene settle.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "seconds": {
+     "type": "number",
+     "description": "How long to wait.",
+     "default": 0.5,
+     "minimum": 0,
+     "maximum": 10
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": []
+ },
+ {
+  "name": "move_to_home_pose",
+  "description": "Move the arm and hand back to the ready pose (palm down above the table, hand open) without touching the objects.",
+  "input_schema": {
+   "type": "object",
+   "properties": {
+    "duration": {
+     "type": "number",
+     "description": "Seconds.",
+     "default": 2.0
+    }
+   },
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": [
+   "actuator1",
+   "actuator2",
+   "actuator3",
+   "actuator4",
+   "actuator5",
+   "actuator6",
+   "actuator7",
+   "rh_A_WRJ2",
+   "rh_A_WRJ1",
+   "rh_A_THJ5",
+   "rh_A_THJ4",
+   "rh_A_THJ3",
+   "rh_A_THJ2",
+   "rh_A_THJ1",
+   "rh_A_FFJ4",
+   "rh_A_FFJ3",
+   "rh_A_FFJ0",
+   "rh_A_MFJ4",
+   "rh_A_MFJ3",
+   "rh_A_MFJ0",
+   "rh_A_RFJ4",
+   "rh_A_RFJ3",
+   "rh_A_RFJ0",
+   "rh_A_LFJ5",
+   "rh_A_LFJ4",
+   "rh_A_LFJ3",
+   "rh_A_LFJ0"
+  ]
+ },
+ {
+  "name": "reset_scene",
+  "description": "Reset everything: robot to the home pose and all objects back to their start positions.",
+  "input_schema": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": []
+ },
+ {
+  "name": "get_red_cube_state",
+  "description": "Read the red cube's state: position, how high it is lifted, which hand parts touch it, whether it is held and whether it is in the target zone.",
+  "input_schema": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": []
+ },
+ {
+  "name": "get_blue_ball_state",
+  "description": "Read the blue ball's state: position, how high it is lifted, which hand parts touch it, whether it is held and whether it is in the target zone.",
+  "input_schema": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": []
+ },
+ {
+  "name": "get_green_cylinder_state",
+  "description": "Read the green cylinder's state: position, how high it is lifted, which hand parts touch it, whether it is held and whether it is in the target zone.",
+  "input_schema": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": []
+ },
+ {
+  "name": "camera_snapshot_overview",
+  "description": "Take a picture of the scene from the 'overview' camera (returns a PNG image).",
+  "input_schema": {
+   "type": "object",
+   "properties": {},
+   "required": [],
+   "additionalProperties": false
+  },
+  "family": "sense",
+  "actuators": []
+ }
+]

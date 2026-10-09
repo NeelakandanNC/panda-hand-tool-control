@@ -1,0 +1,75 @@
+[
+ {
+  "task": "lift_cube",
+  "kind": "manipulation",
+  "repeat": 0,
+  "success": true,
+  "agent_claimed_success": true,
+  "steps": 4,
+  "seconds": 18.1,
+  "llm_seconds": 17.1,
+  "robot_seconds": 1.0,
+  "tokens_in": 77654,
+  "tokens_out": 285,
+  "tool_errors": 0,
+  "summary": "Picked up the red cube and verified it is held 12.4 cm above the table.",
+  "trace": [
+   "move_palm_above_red_cube({\"height_cm\": 15}) -> ok; palm at [0.25, 0.0, 0.577] facing down",
+   "lower_palm_onto_red_cube({\"height_offset_cm\": 0}) -> ok; palm at [0.25, 0.0, 0.427] facing down; red_cube: touching little/palm",
+   "hand_pose_close_hand({\"duration\": 1}) -> ok; palm at [0.254, -0.002, 0.437] facing down; red_cube: held",
+   "move_palm_up({\"distance_cm\": 12, \"duration\": 1.5}) -> ok; palm at [0.254, -0.002, 0.556] facing down; red_cube: held, lifted 12.4 cm",
+   "finish({\"success\": true, \"summary\": \"Picked up the red cube and verified it is held 12.4 cm above the table.\"}) -> Picked up the red cube and verified it is held 12.4 cm above the table."
+  ]
+ },
+ {
+  "task": "cylinder_to_zone",
+  "kind": "manipulation",
+  "repeat": 0,
+  "success": true,
+  "agent_claimed_success": true,
+  "steps": 7,
+  "seconds": 27.4,
+  "llm_seconds": 24.8,
+  "robot_seconds": 2.6,
+  "tokens_in": 124857,
+  "tokens_out": 414,
+  "tool_errors": 0,
+  "summary": "Placed the green cylinder in the yellow target zone and released it.",
+  "trace": [
+   "move_palm_above_green_cylinder({\"height_cm\": 15}) -> ok; palm at [0.299, -0.249, 0.601] facing down",
+   "lower_palm_onto_green_cylinder({\"height_offset_cm\": 0}) -> ok; palm at [0.308, -0.251, 0.478] facing down; green_cylinder: touching little/palm",
+   "hand_pose_close_hand({\"duration\": 1}) -> ok; palm at [0.309, -0.25, 0.481] facing down; green_cylinder: touching little/middle/palm/ring/thumb",
+   "move_palm_up({\"distance_cm\": 10, \"duration\": 1}) -> ok; palm at [0.309, -0.25, 0.58] facing down; green_cylinder: held, lifted 8.8 cm",
+   "move_palm_above_target_zone({\"height_cm\": 17}) -> ok; palm at [0.4, 0.15, 0.569] facing down; green_cylinder: held, lifted 8.7 cm",
+   "lower_palm_to_target_zone({\"height_cm\": 3.5}) -> ok; palm at [0.412, 0.157, 0.477] facing down; green_cylinder: in_target_zone, touching little/middle/palm/ring/thumb",
+   "hand_pose_open_hand({\"duration\": 1}) -> ok; palm at [0.412, 0.154, 0.478] facing down; green_cylinder: in_target_zone, touching palm",
+   "finish({\"success\": true, \"summary\": \"Placed the green cylinder in the yellow target zone and released it.\"}) -> Placed the green cylinder in the yellow target zone and released it."
+  ]
+ },
+ {
+  "task": "cube_to_zone",
+  "kind": "manipulation",
+  "repeat": 0,
+  "success": true,
+  "agent_claimed_success": true,
+  "steps": 8,
+  "seconds": 29.3,
+  "llm_seconds": 27.4,
+  "robot_seconds": 1.9,
+  "tokens_in": 140539,
+  "tokens_out": 608,
+  "tool_errors": 0,
+  "summary": "The red cube is released and confirmed inside the yellow target zone.",
+  "trace": [
+   "move_palm_above_red_cube({\"height_cm\": 15}) -> ok; palm at [0.25, 0.0, 0.577] facing down",
+   "lower_palm_onto_red_cube({\"height_offset_cm\": 0}) -> ok; palm at [0.25, 0.0, 0.427] facing down; red_cube: touching little/palm",
+   "hand_pose_close_hand({\"duration\": 1}) -> ok; palm at [0.254, -0.002, 0.437] facing down; red_cube: held",
+   "move_palm_above_target_zone({\"height_cm\": 17}) -> ok; palm at [0.4, 0.15, 0.57] facing down; red_cube: held, lifted 14.1 cm",
+   "lower_palm_to_target_zone({\"height_cm\": 3.5}) -> ok; palm at [0.403, 0.16, 0.444] facing down; red_cube: held, lifted 1.4 cm",
+   "hand_pose_open_hand({\"duration\": 1}) -> ok; palm at [0.403, 0.155, 0.444] facing down; red_cube: held, lifted 1.0 cm",
+   "straighten_thumb({}) -> ok; palm at [0.402, 0.154, 0.442] facing down; red_cube: in_target_zone, touching palm/thumb",
+   "wait({\"seconds\": 1}) -> ok; palm at [0.402, 0.154, 0.44] facing down; red_cube: in_target_zone, touching palm",
+   "finish({\"success\": true, \"summary\": \"The red cube is released and confirmed inside the yellow target zone.\"}) -> The red cube is released and confirmed inside the yellow target zone."
+  ]
+ }
+]
